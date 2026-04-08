@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="course_author_label">Автор</string>
+    <string name="course_start_button">Начать курс</string>
+    <string name="course_open_platform_button">Перейти на платформу</string>
+    <string name="course_about_title">О курсе</string>
+
+    <string name="course_error_not_found">Курс не найден</string>
+    <string name="course_error_load">Ошибка загрузки курса</string>
+    <string name="course_error_toggle_favorite">Ошибка обновления избранного</string>
+
+    <string name="course_back_content_description">Назад</string>
+    <string name="course_bookmark_content_description">Избранное</string>
+    <string name="course_cover_content_description">Обложка курса</string>
+    <string name="course_rating_star_content_description">Рейтинг</string>
+    <string name="course_logo_content_description">Логотип автора курса</string>
+</resources>

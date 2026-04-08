@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_search_hint">Search courses...</string>
+    <string name="main_sort_by_date">По дате добавления</string>
+    <string name="main_sort_arrow">⇵</string>
+    <string name="main_course_details">Подробнее</string>
+
+    <string name="main_error_load_courses">Ошибка загрузки курсов</string>
+    <string name="main_error_toggle_favorite">Ошибка обновления избранного</string>
+
+    <string name="main_search_content_description">Поиск</string>
+    <string name="main_filter_content_description">Фильтр</string>
+    <string name="main_course_image_content_description">Изображение курса</string>
+    <string name="main_bookmark_content_description">Избранное</string>
+    <string name="main_rating_star_content_description">Рейтинг курса</string>
+    <string name="main_details_arrow_content_description">Перейти к подробностям</string>
+</resources>

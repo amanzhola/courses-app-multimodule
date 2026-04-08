@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottom_nav_background">#24252A</color>
+    <color name="bottom_nav_border">#4D555E</color>
+
+    <color name="bottom_nav_active">#12B956</color>
+    <color name="bottom_nav_inactive">#F2F2F3</color>
+
+    <color name="bottom_nav_pill_active">#32333A</color>
+    <color name="bottom_nav_pill_inactive">#24252A</color>
+</resources>

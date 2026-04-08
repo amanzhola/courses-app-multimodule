@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.CoursesApp.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@null</item>
+        <item name="itemTextColor">@color/selector_bottom_nav</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemPaddingTop">@dimen/bottom_nav_item_padding_top</item>
+        <item name="itemPaddingBottom">@dimen/bottom_nav_item_padding_bottom</item>
+        <item name="itemIconSize">@dimen/bottom_nav_icon_size</item>
+    </style>
+
+</resources>

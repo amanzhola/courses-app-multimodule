@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="favorite_text_title">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/favorite_text_size_title</item>
+        <item name="android:textColor">@color/favorite_text_primary</item>
+    </style>
+
+    <style name="favorite_text_course_title">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:textSize">@dimen/favorite_text_size_course_title</item>
+        <item name="android:lineHeight">@dimen/favorite_line_height_course_title</item>
+        <item name="android:letterSpacing">0.009375</item>
+        <item name="android:textColor">@color/favorite_text_on_card</item>
+    </style>
+
+    <style name="favorite_text_course_description">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textFontWeight">400</item>
+        <item name="android:textSize">@dimen/favorite_text_size_description</item>
+        <item name="android:lineHeight">@dimen/favorite_line_height_description</item>
+        <item name="android:letterSpacing">0.0333333</item>
+        <item name="android:textColor">@color/favorite_text_on_card</item>
+    </style>
+
+    <style name="favorite_text_course_price">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:textSize">@dimen/favorite_text_size_price</item>
+        <item name="android:lineHeight">@dimen/favorite_line_height_price</item>
+        <item name="android:letterSpacing">0.009375</item>
+        <item name="android:textColor">@color/favorite_text_on_card</item>
+    </style>
+
+    <style name="favorite_text_course_details">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/favorite_text_size_details</item>
+        <item name="android:lineHeight">@dimen/favorite_line_height_details</item>
+        <item name="android:letterSpacing">0.0333333</item>
+        <item name="android:textColor">@color/favorite_accent_green</item>
+    </style>
+
+    <style name="favorite_text_course_meta">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/favorite_text_size_meta</item>
+        <item name="android:textColor">@color/favorite_text_on_card</item>
+    </style>
+
+</resources>

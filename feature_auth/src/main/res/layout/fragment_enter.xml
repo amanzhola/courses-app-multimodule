@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/auth_screen_background"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/auth_padding_horizontal_small"
+    android:paddingTop="@dimen/auth_padding_top_enter"
+    android:paddingEnd="@dimen/auth_padding_horizontal_small"
+    android:paddingBottom="@dimen/auth_padding_bottom">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/auth_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/auth_margin_title_top"
+        android:text="@string/auth_enter_title" />
+
+    <TextView
+        android:id="@+id/emailLabelTextView"
+        style="@style/auth_text_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/auth_margin_label_top_large"
+        android:text="@string/auth_email_label" />
+
+    <EditText
+        android:id="@+id/emailEdit"
+        style="@style/auth_edit_text_small"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/auth_input_height_small"
+        android:layout_marginTop="@dimen/auth_margin_field_top"
+        android:hint="@string/auth_email_hint"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        tools:text="" />
+
+    <TextView
+        android:id="@+id/passwordLabelTextView"
+        style="@style/auth_text_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/auth_margin_switch_auth_top"
+        android:text="@string/auth_password_label" />
+
+    <EditText
+        android:id="@+id/passwordEdit"
+        style="@style/auth_edit_text_small"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/auth_input_height_small"
+        android:layout_marginTop="@dimen/auth_margin_field_top"
+        android:hint="@string/auth_password_hint"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        tools:text="" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        style="@style/auth_button_primary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/auth_button_height_small"
+        android:layout_marginTop="@dimen/auth_margin_button_top"
+        android:enabled="false"
+        android:text="@string/auth_login_button" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/auth_margin_bottom_row_top"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/registrationTextView"
+            style="@style/auth_text_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auth_no_account"
+            android:textColor="@color/auth_text_primary" />
+
+        <TextView
+            android:id="@+id/registrationLinkTextView"
+            style="@style/auth_text_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auth_registration_link"
+            android:textColor="@color/auth_green" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/forgotPasswordTextView"
+        style="@style/auth_text_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/auth_margin_forgot_top"
+        android:text="@string/auth_forgot_password"
+        android:textColor="@color/auth_green" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/auth_divider_height"
+        android:layout_marginTop="@dimen/auth_margin_divider_top_large"
+        android:background="@color/auth_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/auth_social_button_height_small"
+        android:layout_marginTop="@dimen/auth_margin_social_top"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/vkButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/auth_social_button_height_small"
+            android:layout_weight="1"
+            android:background="@drawable/bg_auth_vk_button"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/auth_vk_icon_width"
+                android:layout_height="@dimen/auth_vk_icon_height"
+                android:layout_gravity="center"
+                android:contentDescription="@string/auth_vk_content_description"
+                android:src="@drawable/ic_vk" />
+        </FrameLayout>
+
+        <Space
+            android:layout_width="@dimen/auth_social_spacing_small"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/okButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/auth_social_button_height_small"
+            android:layout_weight="1"
+            android:background="@drawable/bg_auth_ok_button"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/auth_ok_icon_width"
+                android:layout_height="@dimen/auth_ok_icon_height"
+                android:layout_gravity="center"
+                android:contentDescription="@string/auth_ok_content_description"
+                android:src="@drawable/ic_group" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

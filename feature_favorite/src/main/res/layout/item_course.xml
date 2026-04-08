@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/favorite_card_height"
+    android:layout_marginBottom="@dimen/favorite_card_margin_bottom"
+    android:background="@drawable/bg_course_card"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/favorite_image_height">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/favorite_image_height"
+            android:background="@drawable/bg_course_image_rounded"
+            android:clipToOutline="true">
+
+            <com.example.coursesapp.feature_main.presentation.view.TopCropImageView
+                android:id="@+id/courseImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/favorite_image_height"
+                android:contentDescription="@string/favorite_course_image_content_description"
+                tools:src="@drawable/ic_cover" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_marginStart="@dimen/favorite_badges_margin_start"
+            android:layout_marginBottom="@dimen/favorite_badges_margin_bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ratingBadgeContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/favorite_badge_height"
+                android:background="@drawable/bg_course_badge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/favorite_badge_padding_horizontal"
+                android:paddingTop="@dimen/favorite_badge_padding_vertical"
+                android:paddingEnd="@dimen/favorite_badge_padding_horizontal"
+                android:paddingBottom="@dimen/favorite_badge_padding_vertical">
+
+                <ImageView
+                    android:id="@+id/rateStarImageView"
+                    android:layout_width="@dimen/favorite_star_size"
+                    android:layout_height="@dimen/favorite_star_size"
+                    android:contentDescription="@string/favorite_rating_star_content_description"
+                    android:src="@drawable/ic_green_star" />
+
+                <TextView
+                    android:id="@+id/rateTextView"
+                    style="@style/favorite_text_course_meta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/favorite_meta_spacing_small"
+                    android:text="4.9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dateBadgeContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/favorite_badge_height"
+                android:layout_marginStart="@dimen/favorite_badge_spacing"
+                android:background="@drawable/bg_course_badge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/favorite_badge_padding_horizontal"
+                android:paddingTop="@dimen/favorite_badge_padding_vertical"
+                android:paddingEnd="@dimen/favorite_badge_padding_horizontal"
+                android:paddingBottom="@dimen/favorite_badge_padding_vertical">
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    style="@style/favorite_text_course_meta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22 Мая 2024" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/favoriteImageView"
+            android:layout_width="@dimen/favorite_bookmark_size"
+            android:layout_height="@dimen/favorite_bookmark_size"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="@dimen/favorite_bookmark_margin"
+            android:layout_marginEnd="@dimen/favorite_bookmark_margin"
+            android:contentDescription="@string/favorite_bookmark_content_description"
+            android:src="@drawable/ic_bookmark" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/favorite_content_height"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/favorite_content_padding"
+        android:paddingTop="@dimen/favorite_content_padding"
+        android:paddingEnd="@dimen/favorite_content_padding"
+        android:paddingBottom="@dimen/favorite_content_padding">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/favorite_text_course_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            style="@style/favorite_text_course_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/favorite_description_margin_top"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/favorite_bottom_row_margin_top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/priceTextView"
+                style="@style/favorite_text_course_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/detailsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/detailsTextView"
+                    style="@style/favorite_text_course_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/favorite_course_details" />
+
+                <ImageView
+                    android:id="@+id/detailsArrowImageView"
+                    android:layout_width="@dimen/favorite_arrow_width"
+                    android:layout_height="@dimen/favorite_arrow_height"
+                    android:layout_marginStart="@dimen/favorite_arrow_margin_start"
+                    android:contentDescription="@string/favorite_details_arrow_content_description"
+                    android:src="@drawable/ic_arrow_right_short_fill" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

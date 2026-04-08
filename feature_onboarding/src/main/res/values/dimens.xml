@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="onboarding_screen_padding_top">120dp</dimen>
+    <dimen name="onboarding_screen_padding_bottom">28dp</dimen>
+
+    <dimen name="onboarding_horizontal_margin">28dp</dimen>
+    <dimen name="onboarding_row_spacing">12dp</dimen>
+    <dimen name="onboarding_chip_spacing">8dp</dimen>
+
+    <dimen name="onboarding_title_margin_top_to_tags">56dp</dimen>
+
+    <dimen name="onboarding_chip_height">60dp</dimen>
+    <dimen name="onboarding_chip_radius">100dp</dimen>
+    <dimen name="onboarding_chip_padding_horizontal">20dp</dimen>
+
+    <dimen name="onboarding_continue_button_height">60dp</dimen>
+
+    <dimen name="onboarding_title_text_size">28sp</dimen>
+    <dimen name="onboarding_chip_text_size">16sp</dimen>
+    <dimen name="onboarding_continue_text_size">16sp</dimen>
+
+    <dimen name="onboarding_chip_width_1c_admin">208dp</dimen>
+    <dimen name="onboarding_chip_width_rabbitmq">111dp</dimen>
+    <dimen name="onboarding_chip_width_traffic">123dp</dimen>
+
+    <dimen name="onboarding_chip_width_content_marketing">147dp</dimen>
+    <dimen name="onboarding_chip_width_b2b_marketing">166dp</dimen>
+    <dimen name="onboarding_chip_width_google_analytics">182dp</dimen>
+
+    <dimen name="onboarding_chip_width_ux_researcher">160dp</dimen>
+    <dimen name="onboarding_chip_width_web_analytics">160dp</dimen>
+    <dimen name="onboarding_chip_width_big_data">118dp</dimen>
+
+    <dimen name="onboarding_chip_width_game_design">132dp</dimen>
+    <dimen name="onboarding_chip_width_web_design">154dp</dimen>
+    <dimen name="onboarding_chip_width_cinema_4d">138dp</dimen>
+    <dimen name="onboarding_chip_width_prompt_engineering">194dp</dimen>
+
+    <dimen name="onboarding_chip_width_webflow">118dp</dimen>
+    <dimen name="onboarding_chip_width_three_js">100dp</dimen>
+    <dimen name="onboarding_chip_width_parsing">132dp</dimen>
+    <dimen name="onboarding_chip_width_python_dev">192dp</dimen>
+</resources>

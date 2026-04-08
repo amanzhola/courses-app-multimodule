@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="course_screen_background">#101114</color>
+    <color name="course_surface_dark">#24252A</color>
+    <color name="course_text_primary">#F2F2F3</color>
+    <color name="course_text_secondary">#151515</color>
+    <color name="course_green">#12B956</color>
+    <color name="course_badge_bg">#4D32333A</color>
+    <color name="course_icon_background">#F2F2F3</color>
+</resources>

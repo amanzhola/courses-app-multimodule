@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_title">Профиль</string>
+    <string name="profile_support">Написать в поддержку</string>
+    <string name="profile_settings">Настройки</string>
+    <string name="profile_logout">Выйти из аккаунта</string>
+    <string name="profile_your_courses">Ваши курсы</string>
+
+    <string name="profile_menu_arrow_content_description">Перейти</string>
+    <string name="profile_course_image_content_description">Изображение курса</string>
+    <string name="profile_rating_star_content_description">Рейтинг курса</string>
+    <string name="profile_bookmark_circle_content_description">Избранное</string>
+    <string name="profile_bookmark_icon_content_description">Курс в избранном</string>
+</resources>

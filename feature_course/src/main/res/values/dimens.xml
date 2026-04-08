@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="course_header_height">300dp</dimen>
+
+    <dimen name="course_screen_padding_horizontal">16dp</dimen>
+    <dimen name="course_content_padding_top">24dp</dimen>
+    <dimen name="course_content_padding_bottom">24dp</dimen>
+
+    <dimen name="course_toolbar_icon_size">64dp</dimen>
+    <dimen name="course_toolbar_margin_top">44dp</dimen>
+    <dimen name="course_badge_height">22dp</dimen>
+    <dimen name="course_badge_corner_radius">12dp</dimen>
+
+    <dimen name="course_badge_padding_horizontal">6dp</dimen>
+    <dimen name="course_badge_padding_vertical">4dp</dimen>
+    <dimen name="course_badge_spacing">8dp</dimen>
+
+    <dimen name="course_star_icon_size">10dp</dimen>
+    <dimen name="course_meta_spacing_small">4dp</dimen>
+
+    <dimen name="course_author_icon_size">40dp</dimen>
+    <dimen name="course_author_spacing">12dp</dimen>
+    <dimen name="course_author_name_margin_top">2dp</dimen>
+
+    <dimen name="course_button_height">40dp</dimen>
+    <dimen name="course_button_corner_radius">100dp</dimen>
+    <dimen name="course_button_spacing">16dp</dimen>
+
+    <dimen name="course_section_margin_top">32dp</dimen>
+    <dimen name="course_body_margin_top">12dp</dimen>
+    <dimen name="course_block_margin_top">24dp</dimen>
+
+    <dimen name="course_text_size_title">22sp</dimen>
+    <dimen name="course_text_size_meta">12sp</dimen>
+    <dimen name="course_text_size_author_name">16sp</dimen>
+    <dimen name="course_text_size_button">14sp</dimen>
+    <dimen name="course_text_size_body">14sp</dimen>
+
+    <dimen name="course_line_height_title">28sp</dimen>
+    <dimen name="course_line_height_meta">16sp</dimen>
+    <dimen name="course_line_height_author_label">14sp</dimen>
+    <dimen name="course_line_height_author_name">18sp</dimen>
+    <dimen name="course_line_height_button">20sp</dimen>
+    <dimen name="course_line_height_body">20sp</dimen>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="onboarding_bg">#0B0B0F</color>
+    <color name="onboarding_text_primary">#F2F2F3</color>
+    <color name="onboarding_chip_dark">#4D32333A</color>
+    <color name="onboarding_chip_green">#12B956</color>
+</resources>

@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/profile_bookmark_circle_size"
+    android:height="@dimen/profile_bookmark_circle_size"
+    android:viewportWidth="28"
+    android:viewportHeight="28">
+    <path
+        android:pathData="M14,0L14,0A14,14 0,0 1,28 14L28,14A14,14 0,0 1,14 28L14,28A14,14 0,0 1,0 14L0,14A14,14 0,0 1,14 0z"
+        android:fillColor="@color/profile_bookmark_circle"
+        android:fillAlpha="0.3" />
+</vector>

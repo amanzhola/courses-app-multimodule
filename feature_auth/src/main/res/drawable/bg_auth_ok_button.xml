@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="0"
+        android:startColor="@color/auth_ok_start"
+        android:endColor="@color/auth_ok_end" />
+    <corners android:radius="@dimen/auth_button_radius" />
+</shape>

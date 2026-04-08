@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth_enter_title">Вход</string>
+    <string name="auth_registration_title">Регистрация</string>
+
+    <string name="auth_email_label">Email</string>
+    <string name="auth_password_label">Пароль</string>
+    <string name="auth_repeat_password_label">Повторить пароль</string>
+
+    <string name="auth_email_hint">example@gmail.com</string>
+    <string name="auth_password_hint">Введите пароль</string>
+    <string name="auth_repeat_password_hint">Введите пароль ещё раз</string>
+
+    <string name="auth_login_button">Вход</string>
+    <string name="auth_registration_button">Регистрация</string>
+
+    <string name="auth_no_account">Нету аккаунта? </string>
+    <string name="auth_registration_link">Регистрация</string>
+
+    <string name="auth_has_account">Уже есть аккаунт? </string>
+    <string name="auth_login_link">Войти</string>
+
+    <string name="auth_forgot_password">Забыл пароль</string>
+
+    <string name="auth_vk_content_description">Вход через VK</string>
+    <string name="auth_ok_content_description">Вход через OK</string>
+
+    <string name="auth_vk_text">VK</string>
+    <string name="auth_ok_text">OK</string>
+</resources>

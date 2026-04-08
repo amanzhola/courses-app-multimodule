@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="1.0"?>
+<resources>
+    <color name="main_screen_background">#101114</color>
+    <color name="main_card_background">#24252A</color>
+    <color name="main_text_primary">#F2F2F3</color>
+    <color name="main_accent_green">#12B956</color>
+    <color name="main_search_background">#24252A</color>
+    <color name="main_search_hint">#F2F2F3</color>
+    <color name="main_meta_badge_bg">#4D32333A</color>
+
+    <color name="main_placeholder_background">#24252A</color>
+    <color name="main_image_overlay">#00000000</color>
+    <color name="main_bookmark_circle">#32333A</color>
+</resources>

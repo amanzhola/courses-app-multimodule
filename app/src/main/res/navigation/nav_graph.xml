@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/enterFragment">
+
+    <fragment
+        android:id="@+id/enterFragment"
+        android:name="com.example.coursesapp.feature_auth.presentation.enter.EnterFragment"
+        android:label="Enter" />
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.coursesapp.feature_main.presentation.MainFragment"
+        android:label="Main" />
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.coursesapp.feature_favorite.presentation.FavoriteFragment"
+        android:label="Favorite" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.coursesapp.feature_profile.presentation.ProfileFragment"
+        android:label="Profile" />
+
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.example.coursesapp.feature_course.presentation.CourseFragment"
+        android:label="Course">
+
+        <argument
+            android:name="courseId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

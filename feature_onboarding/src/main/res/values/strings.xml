@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_title">Тысячи курсов\nв одном месте</string>
+    <string name="onboarding_continue">Продолжить</string>
+
+    <string name="onboarding_chip_1c_admin">1С Администрирование</string>
+    <string name="onboarding_chip_rabbitmq">RabbitMQ</string>
+    <string name="onboarding_chip_traffic">Трафик</string>
+
+    <string name="onboarding_chip_content_marketing">Контент маркетинг</string>
+    <string name="onboarding_chip_b2b_marketing">B2B маркетинг</string>
+    <string name="onboarding_chip_google_analytics">Google Аналитика</string>
+
+    <string name="onboarding_chip_ux_researcher">UX исследователь</string>
+    <string name="onboarding_chip_web_analytics">Веб-аналитика</string>
+    <string name="onboarding_chip_big_data">Big Data</string>
+
+    <string name="onboarding_chip_game_design">Геймдизайн</string>
+    <string name="onboarding_chip_web_design">Веб-дизайн</string>
+    <string name="onboarding_chip_cinema_4d">Cinema 4D</string>
+    <string name="onboarding_chip_prompt_engineering">Промпт инженеринг</string>
+
+    <string name="onboarding_chip_webflow">Webflow</string>
+    <string name="onboarding_chip_three_js">Three.js</string>
+    <string name="onboarding_chip_parsing">Парсинг</string>
+    <string name="onboarding_chip_python_dev">Python-разработка</string>
+</resources>

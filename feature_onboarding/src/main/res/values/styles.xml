@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="onboarding_chip_base">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/onboarding_text_primary</item>
+        <item name="android:textSize">@dimen/onboarding_chip_text_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingStart">@dimen/onboarding_chip_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/onboarding_chip_padding_horizontal</item>
+    </style>
+
+    <style name="onboarding_chip_dark" parent="onboarding_chip_base">
+        <item name="android:background">@drawable/bg_onboarding_chip_dark</item>
+    </style>
+
+    <style name="onboarding_chip_green" parent="onboarding_chip_base">
+        <item name="android:background">@drawable/bg_onboarding_chip_green</item>
+    </style>
+
+    <style name="onboarding_title_text">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/onboarding_title_text_size</item>
+        <item name="android:textColor">@color/onboarding_text_primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+    </style>
+
+    <style name="onboarding_continue_button">
+        <item name="android:background">@drawable/bg_onboarding_continue_button</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/onboarding_text_primary</item>
+        <item name="android:textSize">@dimen/onboarding_continue_text_size</item>
+    </style>
+
+</resources>

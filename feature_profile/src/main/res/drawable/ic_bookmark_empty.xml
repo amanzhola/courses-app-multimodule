@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/profile_bookmark_circle_size"
+    android:height="@dimen/profile_bookmark_circle_size"
+    android:viewportWidth="28"
+    android:viewportHeight="28">
+  <path
+      android:pathData="M14,0L14,0A14,14 0,0 1,28 14L28,14A14,14 0,0 1,14 28L14,28A14,14 0,0 1,0 14L0,14A14,14 0,0 1,14 0z"
+      android:fillColor="@color/profile_bookmark_circle"
+      android:fillAlpha="0.3" />
+  <path
+      android:pathData="M11.332,7.343C9.631,7.343 8.665,8.307 8.665,10.007V19.998C8.665,20.476 9.142,20.811 9.582,20.623L13.999,18.729L18.395,20.623C18.835,20.811 19.332,20.476 19.332,19.998V10.007C19.332,8.26 18.462,7.343 16.665,7.343H11.332ZM11.332,8.675H16.665C17.709,8.675 17.999,8.98 17.999,10.007V18.999L14.249,17.396C14.081,17.325 13.895,17.325 13.728,17.396L9.999,18.999V10.007C9.999,9.043 10.367,8.675 11.332,8.675Z"
+      android:fillColor="@color/profile_text_primary" />
+</vector>

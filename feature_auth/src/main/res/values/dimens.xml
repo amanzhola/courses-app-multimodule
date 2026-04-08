@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="auth_padding_horizontal_small">16dp</dimen>
+    <dimen name="auth_padding_horizontal_large">28dp</dimen>
+    <dimen name="auth_padding_top_enter">56dp</dimen>
+    <dimen name="auth_padding_top_registration">120dp</dimen>
+    <dimen name="auth_padding_bottom">24dp</dimen>
+
+    <dimen name="auth_margin_title_top">48dp</dimen>
+    <dimen name="auth_margin_label_top_large">48dp</dimen>
+    <dimen name="auth_margin_label_top_medium">28dp</dimen>
+    <dimen name="auth_margin_field_top">16dp</dimen>
+    <dimen name="auth_margin_button_top">36dp</dimen>
+    <dimen name="auth_margin_bottom_row_top">28dp</dimen>
+    <dimen name="auth_margin_forgot_top">12dp</dimen>
+    <dimen name="auth_margin_divider_top_large">48dp</dimen>
+    <dimen name="auth_margin_divider_top_medium">40dp</dimen>
+    <dimen name="auth_margin_social_top">48dp</dimen>
+    <dimen name="auth_margin_switch_auth_top">24dp</dimen>
+
+    <dimen name="auth_input_height_small">48dp</dimen>
+    <dimen name="auth_input_height_large">58dp</dimen>
+    <dimen name="auth_button_height_small">40dp</dimen>
+    <dimen name="auth_social_button_height_small">48dp</dimen>
+    <dimen name="auth_social_button_height_large">60dp</dimen>
+    <dimen name="auth_divider_height">1dp</dimen>
+
+    <dimen name="auth_field_padding_horizontal_small">16dp</dimen>
+    <dimen name="auth_field_padding_horizontal_large">24dp</dimen>
+
+    <dimen name="auth_social_spacing_small">16dp</dimen>
+    <dimen name="auth_social_spacing_medium">12dp</dimen>
+
+    <dimen name="auth_edit_text_radius">28dp</dimen>
+    <dimen name="auth_field_radius">30dp</dimen>
+    <dimen name="auth_button_radius">30dp</dimen>
+
+    <dimen name="auth_vk_icon_width">26dp</dimen>
+    <dimen name="auth_vk_icon_height">16dp</dimen>
+    <dimen name="auth_ok_icon_width">16dp</dimen>
+    <dimen name="auth_ok_icon_height">26dp</dimen>
+
+    <dimen name="auth_text_size_title">28sp</dimen>
+    <dimen name="auth_text_size_registration_title">24sp</dimen>
+    <dimen name="auth_text_size_label">16sp</dimen>
+    <dimen name="auth_text_size_hint_small">14sp</dimen>
+    <dimen name="auth_text_size_hint_large">16sp</dimen>
+    <dimen name="auth_text_size_button">14sp</dimen>
+    <dimen name="auth_text_size_bottom">12sp</dimen>
+    <dimen name="auth_text_size_social">22sp</dimen>
+
+    <dimen name="auth_line_height_title">36sp</dimen>
+    <dimen name="auth_line_height_label">18sp</dimen>
+    <dimen name="auth_line_height_hint">20sp</dimen>
+    <dimen name="auth_line_height_bottom">15sp</dimen>
+</resources>

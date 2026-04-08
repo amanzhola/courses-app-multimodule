@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/course_toolbar_icon_size"
+    android:height="@dimen/course_toolbar_icon_size"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:pathData="M32,6L32,6A22,22 0,0 1,54 28L54,28A22,22 0,0 1,32 50L32,50A22,22 0,0 1,10 28L10,28A22,22 0,0 1,32 6z"
+        android:fillColor="@color/course_icon_background" />
+    <path
+        android:pathData="M27.998,18.014C25.446,18.014 23.998,19.461 23.998,22.011V36.997C23.998,37.715 24.713,38.217 25.373,37.934L31.998,35.093L38.592,37.934C39.252,38.217 39.998,37.715 39.998,36.997V22.011C39.998,19.389 38.693,18.014 35.998,18.014H27.998Z"
+        android:fillColor="@color/course_green" />
+</vector>

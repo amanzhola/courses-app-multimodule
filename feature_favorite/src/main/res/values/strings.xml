@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="favorite_title">Избранное</string>
+    <string name="favorite_course_details">Подробнее</string>
+
+    <string name="favorite_course_image_content_description">Изображение курса</string>
+    <string name="favorite_bookmark_content_description">Избранное</string>
+    <string name="favorite_rating_star_content_description">Рейтинг курса</string>
+    <string name="favorite_details_arrow_content_description">Перейти к подробностям</string>
+</resources>

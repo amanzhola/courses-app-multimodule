@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="favorite_screen_padding_horizontal">16dp</dimen>
+    <dimen name="favorite_title_margin_top">56dp</dimen>
+    <dimen name="favorite_list_margin_top">24dp</dimen>
+    <dimen name="favorite_list_padding_bottom">16dp</dimen>
+
+    <dimen name="favorite_card_height">236dp</dimen>
+    <dimen name="favorite_card_margin_bottom">16dp</dimen>
+    <dimen name="favorite_card_corner_radius">16dp</dimen>
+
+    <dimen name="favorite_image_height">114dp</dimen>
+    <dimen name="favorite_image_corner_radius">12dp</dimen>
+
+    <dimen name="favorite_badge_height">22dp</dimen>
+    <dimen name="favorite_badge_corner_radius">12dp</dimen
+        >
+    <dimen name="favorite_badge_padding_horizontal">6dp</dimen>
+    <dimen name="favorite_badge_padding_vertical">4dp</dimen>
+    <dimen name="favorite_badge_spacing">8dp</dimen>
+
+    <dimen name="favorite_badges_margin_start">12dp</dimen>
+    <dimen name="favorite_badges_margin_bottom">8dp</dimen>
+
+    <dimen name="favorite_star_size">10dp</dimen>
+    <dimen name="favorite_meta_spacing_small">4dp</dimen>
+
+    <dimen name="favorite_bookmark_size">28dp</dimen>
+    <dimen name="favorite_bookmark_margin">12dp</dimen>
+
+    <dimen name="favorite_content_height">122dp</dimen>
+    <dimen name="favorite_content_padding">16dp</dimen>
+
+    <dimen name="favorite_description_margin_top">8dp</dimen>
+    <dimen name="favorite_bottom_row_margin_top">12dp</dimen>
+
+    <dimen name="favorite_arrow_width">8dp</dimen>
+    <dimen name="favorite_arrow_height">7dp</dimen>
+    <dimen name="favorite_arrow_margin_start">4dp</dimen>
+
+    <dimen name="favorite_text_size_title">32sp</dimen>
+    <dimen name="favorite_text_size_course_title">16sp</dimen>
+    <dimen name="favorite_text_size_description">12sp</dimen>
+    <dimen name="favorite_text_size_price">16sp</dimen>
+    <dimen name="favorite_text_size_details">12sp</dimen>
+    <dimen name="favorite_text_size_meta">12sp</dimen>
+
+    <dimen name="favorite_line_height_course_title">18sp</dimen>
+    <dimen name="favorite_line_height_description">16sp</dimen>
+    <dimen name="favorite_line_height_price">18sp</dimen>
+    <dimen name="favorite_line_height_details">15sp</dimen>
+</resources>

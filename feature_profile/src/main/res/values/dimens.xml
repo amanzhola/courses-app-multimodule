@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="profile_screen_padding_horizontal">16dp</dimen>
+    <dimen name="profile_title_margin_top">56dp</dimen>
+
+    <dimen name="profile_menu_height">122dp</dimen>
+    <dimen name="profile_menu_margin_top">24dp</dimen>
+    <dimen name="profile_menu_corner_radius">16dp</dimen>
+    <dimen name="profile_menu_padding_horizontal">16dp</dimen>
+    <dimen name="profile_menu_padding_vertical">4dp</dimen>
+    <dimen name="profile_menu_item_height">38dp</dimen>
+
+    <dimen name="profile_divider_height">1dp</dimen>
+
+    <dimen name="profile_arrow_size">24dp</dimen>
+
+    <dimen name="profile_section_margin_top">24dp</dimen>
+    <dimen name="profile_list_margin_top">24dp</dimen>
+    <dimen name="profile_list_padding_bottom">16dp</dimen>
+
+    <dimen name="profile_card_height">236dp</dimen>
+    <dimen name="profile_card_margin_bottom">16dp</dimen>
+    <dimen name="profile_card_corner_radius">16dp</dimen>
+
+    <dimen name="profile_image_height">114dp</dimen>
+    <dimen name="profile_image_corner_radius">12dp</dimen>
+
+    <dimen name="profile_badge_height">22dp</dimen>
+    <dimen name="profile_badge_corner_radius">12dp</dimen>
+    <dimen name="profile_badge_padding_horizontal">6dp</dimen>
+    <dimen name="profile_badge_padding_vertical">4dp</dimen>
+    <dimen name="profile_badge_spacing">8dp</dimen>
+    <dimen name="profile_badges_margin_start">12dp</dimen>
+    <dimen name="profile_badges_margin_bottom">8dp</dimen>
+
+    <dimen name="profile_star_size">10dp</dimen>
+    <dimen name="profile_meta_spacing_small">4dp</dimen>
+
+    <dimen name="profile_bookmark_circle_size">28dp</dimen>
+    <dimen name="profile_bookmark_icon_width">11dp</dimen>
+    <dimen name="profile_bookmark_icon_height">14dp</dimen>
+    <dimen name="profile_bookmark_margin">12dp</dimen>
+
+    <dimen name="profile_content_height">122dp</dimen>
+    <dimen name="profile_content_padding">16dp</dimen>
+
+    <dimen name="profile_progress_row_margin_top">18dp</dimen>
+    <dimen name="profile_progress_bar_margin_top">10dp</dimen>
+    <dimen name="profile_progress_bar_height">8dp</dimen>
+    <dimen name="profile_progress_radius">100dp</dimen>
+
+    <dimen name="profile_text_size_title">22sp</dimen>
+    <dimen name="profile_text_size_menu_item">14sp</dimen>
+    <dimen name="profile_text_size_course_title">16sp</dimen>
+    <dimen name="profile_text_size_course_meta">12sp</dimen>
+    <dimen name="profile_text_size_progress">12sp</dimen>
+
+    <dimen name="profile_line_height_title">28sp</dimen>
+    <dimen name="profile_line_height_menu_item">20sp</dimen>
+    <dimen name="profile_line_height_course_title">18sp</dimen>
+    <dimen name="profile_line_height_course_meta">16sp</dimen>
+    <dimen name="profile_line_height_progress">16sp</dimen>
+</resources>

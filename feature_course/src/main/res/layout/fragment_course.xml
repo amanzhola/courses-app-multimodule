@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/course_screen_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/courseHeaderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/course_header_height"
+            android:background="@android:color/transparent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:id="@+id/courseCoverImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/course_cover_content_description"
+                android:cropToPadding="false"
+                android:scaleType="centerCrop"
+                android:src="@android:color/transparent"
+                tools:src="@drawable/course_screen_cover" />
+
+            <ProgressBar
+                android:id="@+id/courseCoverProgressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/holo_blue_light"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="@dimen/course_toolbar_icon_size"
+                android:layout_height="@dimen/course_toolbar_icon_size"
+                android:layout_marginStart="@dimen/course_screen_padding_horizontal"
+                android:layout_marginTop="@dimen/course_toolbar_margin_top"
+                android:contentDescription="@string/course_back_content_description"
+                android:src="@drawable/ic_course_back" />
+
+            <ImageView
+                android:id="@+id/bookmarkImageView"
+                android:layout_width="@dimen/course_toolbar_icon_size"
+                android:layout_height="@dimen/course_toolbar_icon_size"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="@dimen/course_toolbar_margin_top"
+                android:layout_marginEnd="@dimen/course_screen_padding_horizontal"
+                android:contentDescription="@string/course_bookmark_content_description"
+                android:src="@drawable/ic_course_bookmark" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_marginStart="@dimen/course_screen_padding_horizontal"
+                android:layout_marginBottom="@dimen/course_screen_padding_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ratingBadgeContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/course_badge_height"
+                    android:background="@drawable/bg_course_badge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/course_badge_padding_horizontal"
+                    android:paddingTop="@dimen/course_badge_padding_vertical"
+                    android:paddingEnd="@dimen/course_badge_padding_horizontal"
+                    android:paddingBottom="@dimen/course_badge_padding_vertical">
+
+                    <ImageView
+                        android:id="@+id/rateStarImageView"
+                        android:layout_width="@dimen/course_star_icon_size"
+                        android:layout_height="@dimen/course_star_icon_size"
+                        android:contentDescription="@string/course_rating_star_content_description"
+                        android:src="@drawable/ic_green_star" />
+
+                    <TextView
+                        android:id="@+id/rateTextView"
+                        style="@style/course_text_meta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/course_meta_spacing_small"
+                        android:text=""
+                        tools:text="4.9" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dateBadgeContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/course_badge_height"
+                    android:layout_marginStart="@dimen/course_badge_spacing"
+                    android:background="@drawable/bg_course_badge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/course_badge_padding_horizontal"
+                    android:paddingTop="@dimen/course_badge_padding_vertical"
+                    android:paddingEnd="@dimen/course_badge_padding_horizontal"
+                    android:paddingBottom="@dimen/course_badge_padding_vertical">
+
+                    <TextView
+                        android:id="@+id/dateTextView"
+                        style="@style/course_text_meta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        tools:text="22 Мая 2024" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/course_screen_padding_horizontal"
+            android:paddingTop="@dimen/course_content_padding_top"
+            android:paddingEnd="@dimen/course_screen_padding_horizontal"
+            android:paddingBottom="@dimen/course_content_padding_bottom">
+
+            <TextView
+                android:id="@+id/courseTitleTextView"
+                style="@style/course_text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                tools:text="Java-разработчик с нуля" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/course_block_margin_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/logoImageView"
+                    android:layout_width="@dimen/course_author_icon_size"
+                    android:layout_height="@dimen/course_author_icon_size"
+                    android:contentDescription="@string/course_logo_content_description"
+                    android:src="@drawable/logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/course_author_spacing"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/authorLabelTextView"
+                        style="@style/course_text_author_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_author_label" />
+
+                    <TextView
+                        android:id="@+id/authorNameTextView"
+                        style="@style/course_text_author_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/course_author_name_margin_top"
+                        android:text=""
+                        tools:text="Merion Academy" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/startCourseButton"
+                style="@style/course_button_primary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/course_button_height"
+                android:layout_marginTop="@dimen/course_block_margin_top"
+                android:text="@string/course_start_button"
+                app:backgroundTint="@null" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/openPlatformButton"
+                style="@style/course_button_secondary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/course_button_height"
+                android:layout_marginTop="@dimen/course_button_spacing"
+                android:text="@string/course_open_platform_button"
+                app:backgroundTint="@null" />
+
+            <TextView
+                android:id="@+id/aboutCourseTitleTextView"
+                style="@style/course_text_section_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/course_section_margin_top"
+                android:text="@string/course_about_title" />
+
+            <TextView
+                android:id="@+id/aboutCourseBodyTextView"
+                style="@style/course_text_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/course_body_margin_top"
+                android:text=""
+                tools:text="Описание курса" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

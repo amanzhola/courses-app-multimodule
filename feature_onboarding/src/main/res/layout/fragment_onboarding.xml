@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/onboarding_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/onboarding_screen_padding_top"
+        android:paddingBottom="@dimen/onboarding_screen_padding_bottom">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/onboarding_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/onboarding_horizontal_margin"
+            android:layout_marginEnd="@dimen/onboarding_horizontal_margin"
+            android:text="@string/onboarding_title" />
+
+        <LinearLayout
+            android:id="@+id/tagsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/onboarding_title_margin_top_to_tags"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_1c_admin"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:text="@string/onboarding_chip_1c_admin" />
+
+                <TextView
+                    style="@style/onboarding_chip_green"
+                    android:layout_width="@dimen/onboarding_chip_width_rabbitmq"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:rotation="15"
+                    android:text="@string/onboarding_chip_rabbitmq" />
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_traffic"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:text="@string/onboarding_chip_traffic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/onboarding_row_spacing"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_content_marketing"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:text="@string/onboarding_chip_content_marketing" />
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_b2b_marketing"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:text="@string/onboarding_chip_b2b_marketing" />
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_google_analytics"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:text="@string/onboarding_chip_google_analytics" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/onboarding_row_spacing"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_ux_researcher"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:text="@string/onboarding_chip_ux_researcher" />
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_web_analytics"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:text="@string/onboarding_chip_web_analytics" />
+
+                <TextView
+                    style="@style/onboarding_chip_green"
+                    android:layout_width="@dimen/onboarding_chip_width_big_data"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:rotation="-15"
+                    android:text="@string/onboarding_chip_big_data" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/onboarding_row_spacing"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_game_design"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:text="@string/onboarding_chip_game_design" />
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_web_design"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:text="@string/onboarding_chip_web_design" />
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_cinema_4d"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:text="@string/onboarding_chip_cinema_4d" />
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_prompt_engineering"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:text="@string/onboarding_chip_prompt_engineering" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/onboarding_row_spacing"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_webflow"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:text="@string/onboarding_chip_webflow" />
+
+                <TextView
+                    style="@style/onboarding_chip_green"
+                    android:layout_width="@dimen/onboarding_chip_width_three_js"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:rotation="15"
+                    android:text="@string/onboarding_chip_three_js" />
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_parsing"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:text="@string/onboarding_chip_parsing" />
+
+                <TextView
+                    style="@style/onboarding_chip_dark"
+                    android:layout_width="@dimen/onboarding_chip_width_python_dev"
+                    android:layout_height="@dimen/onboarding_chip_height"
+                    android:layout_marginStart="@dimen/onboarding_chip_spacing"
+                    android:text="@string/onboarding_chip_python_dev" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continueButton"
+            style="@style/onboarding_continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/onboarding_continue_button_height"
+            android:layout_marginStart="@dimen/onboarding_horizontal_margin"
+            android:layout_marginEnd="@dimen/onboarding_horizontal_margin"
+            android:text="@string/onboarding_continue" />
+
+    </LinearLayout>
+
+</FrameLayout>

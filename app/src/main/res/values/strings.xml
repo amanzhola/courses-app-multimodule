@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CoursesApp</string>
+
+    <string name="bottom_nav_home">Главная</string>
+    <string name="bottom_nav_favorite">Избранное</string>
+    <string name="bottom_nav_profile">Аккаунт</string>
+</resources>
