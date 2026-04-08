@@ -86,6 +86,7 @@
             style="@style/auth_text_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/auth_text_spacing_small"
             android:text="@string/auth_registration_link"
             android:textColor="@color/auth_green" />
     </LinearLayout>

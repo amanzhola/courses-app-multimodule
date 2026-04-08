@@ -53,4 +53,6 @@
     <dimen name="auth_line_height_label">18sp</dimen>
     <dimen name="auth_line_height_hint">20sp</dimen>
     <dimen name="auth_line_height_bottom">15sp</dimen>
+
+    <dimen name="auth_text_spacing_small">4dp</dimen>
 </resources>

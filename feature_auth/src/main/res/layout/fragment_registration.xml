@@ -28,6 +28,16 @@
             android:text="@string/auth_email_label" />
 
         <EditText
+            android:id="@+id/repeatPasswordEditText"
+            style="@style/auth_edit_text_large"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/auth_input_height_large"
+            android:layout_marginTop="@dimen/auth_margin_field_top"
+            android:backgroundTint="@null"
+            android:hint="@string/auth_repeat_password_hint"
+            android:inputType="textPassword" />
+
+        <EditText
             android:id="@+id/emailEditText"
             style="@style/auth_edit_text_large"
             android:layout_width="match_parent"
@@ -61,16 +71,6 @@
             android:layout_marginTop="@dimen/auth_margin_label_top_medium"
             android:text="@string/auth_repeat_password_label" />
 
-        <EditText
-            android:id="@+id/repeatPasswordEditText"
-            style="@style/auth_edit_text_large"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/auth_input_height_large"
-            android:layout_marginTop="@dimen/auth_margin_field_top"
-            android:backgroundTint="@null"
-            android:hint="@string/auth_repeat_password_hint"
-            android:inputType="textPassword" />
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/registrationButton"
             style="@style/auth_button_primary"
@@ -99,6 +99,7 @@
                 style="@style/auth_text_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/auth_text_spacing_small"
                 android:text="@string/auth_login_link"
                 android:textColor="@color/auth_green" />
         </LinearLayout>
