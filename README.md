@@ -409,6 +409,168 @@ hasLike: Boolean
 
 ---
 
+# 🔍 Code Review Notes
+
+В рамках выполнения тестового задания были получены замечания. Ниже приведены исправления и пояснения по архитектурным решениям.
+
+---
+
+## ✅ Исправлено
+
+### 🔧 Конфигурация API
+
+- `BASE_URL` вынесен в `BuildConfig`
+- `MOCK_FILE_ID` вынесен в `BuildConfig`
+
+```kotlin
+buildConfigField("String", "BASE_URL", "\"https://drive.usercontent.google.com/\"")
+buildConfigField("String", "MOCK_FILE_ID", "\"15arTK7XT2b7Yv4BJsmDctA4Hg-BbS8-q\"")
+````
+
+👉 Конфигурация больше не захардкожена в коде и может централизованно изменяться.
+
+---
+
+### 🔧 Fallback стратегия
+
+Fallback на локальный mock JSON сохранён, но сделан **явным и управляемым**:
+
+```kotlin
+buildConfigField("Boolean", "USE_LOCAL_FALLBACK", "true")
+```
+
+```kotlin
+try {
+    api.getCourses()
+} catch (e: Exception) {
+    if (BuildConfig.USE_LOCAL_FALLBACK) {
+        mockDataSource.getCourses()
+    } else {
+        throw e
+    }
+}
+```
+
+👉 Это позволяет:
+
+* гарантировать стабильную демонстрацию проекта
+* явно контролировать поведение (включить/выключить fallback)
+
+---
+
+### 🔧 Работа со строками
+
+Вынесен общий механизм обработки текста в модуль `core-ui`:
+
+```kotlin
+sealed interface UiText {
+    data class DynamicString(val value: String) : UiText
+    data class StringResource(@StringRes val resId: Int) : UiText
+}
+```
+
+👉 Это позволяет:
+
+* не привязывать ViewModel к Android Context
+* использовать `StringResource` для локализации
+* сохранить чистоту архитектуры
+
+---
+
+### 🔧 DI (Dependency Injection)
+
+* устранено дублирование UseCase
+* UseCase объявлены в одном DI-модуле
+
+---
+
+## 💡 Архитектурные решения (осознанно оставлено)
+
+### 🧭 Navigation
+
+Navigation Graph в проекте **присутствует и используется**:
+
+* `NavHostFragment`
+* `NavController`
+* `nav_graph.xml`
+
+Навигация из feature-модулей вынесена в интерфейсы:
+
+```kotlin
+interface MainNavigation
+interface FavoriteNavigation
+```
+
+👉 Это позволяет:
+
+* не связывать feature-модули с Activity
+* не зависеть от конкретной реализации `NavController`
+* соблюдать принципы Clean Architecture
+
+Переходы выполняются через:
+
+```kotlin
+navController.navigate(R.id.courseFragment, bundle)
+```
+
+👉 Использование `destination id` является допустимым способом работы с Navigation Component.
+
+Использование `actions` в `nav_graph.xml` возможно как улучшение,
+но не является обязательным требованием.
+
+---
+
+### 🖼️ Работа с изображениями
+
+В предоставленном API отсутствует поле изображения:
+
+```json
+{
+  "id": 100,
+  "title": "...",
+  ...
+}
+```
+
+👉 Поэтому выбор drawable выполняется на стороне клиента.
+
+Используется сопоставление по `course.id`:
+
+```kotlin
+when (course.id) {
+    ...
+}
+```
+
+👉 Данное решение:
+
+* соответствует ТЗ
+* оправдано отсутствием данных в API
+* не ограничивает масштабирование
+
+При наличии `image` в API может быть заменено на:
+
+* map
+* или загрузку через Coil/Glide
+
+---
+
+## 📌 Итог
+
+Проект реализован с учётом:
+
+* Clean Architecture
+* MVVM
+* многомодульной структуры
+* масштабируемости
+
+Часть замечаний была исправлена,
+часть решений оставлена осознанно, исходя из требований ТЗ и архитектурных принципов.
+
+```
+
+---
+
 ## 👨‍💻 Автор
 
 **Amanzhol Aimov**
