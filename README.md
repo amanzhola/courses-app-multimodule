@@ -180,8 +180,14 @@ CoursesApp/
 ├── feature_course/
 ├── feature_favorite/
 ├── feature_main/
-├── feature_profile/
 ├── feature_onboarding/
+├── feature_profile/
+├── gradle/
+├── screenshots/
+├── build.gradle.kts
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
 └── settings.gradle.kts
 ````
 
