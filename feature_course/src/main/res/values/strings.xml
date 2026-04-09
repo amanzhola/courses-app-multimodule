@@ -14,4 +14,9 @@
     <string name="course_cover_content_description">Обложка курса</string>
     <string name="course_rating_star_content_description">Рейтинг</string>
     <string name="course_logo_content_description">Логотип автора курса</string>
+
+    <string name="error_course_not_found">Курс не найден</string>
+    <string name="error_course_load">Ошибка загрузки курса</string>
+    <string name="error_toggle_favorite">Ошибка обновления избранного</string>
+
 </resources>

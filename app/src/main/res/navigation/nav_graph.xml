@@ -12,12 +12,22 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.coursesapp.feature_main.presentation.MainFragment"
-        android:label="Main" />
+        android:label="Main">
+
+        <action
+            android:id="@+id/action_mainFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.example.coursesapp.feature_favorite.presentation.FavoriteFragment"
-        android:label="Favorite" />
+        android:label="Favorite">
+
+        <action
+            android:id="@+id/action_favoriteFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/profileFragment"

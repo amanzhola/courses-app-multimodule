@@ -5,10 +5,12 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.coursesapp.core.ui.UiText
+import com.example.coursesapp.core.ui.asString
 import com.example.coursesapp.feature_profile.R
 import com.example.coursesapp.feature_profile.databinding.FragmentProfileBinding
 import com.example.coursesapp.feature_profile.presentation.adapter.ProfileCoursesAdapter
-import kotlinx.coroutines.delay
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -34,27 +36,33 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             LinearLayoutManager(requireContext())
         binding.profileCoursesRecyclerView.adapter = adapter
 
-        observeCourses()
+        observeState()
     }
 
     override fun onResume() {
         super.onResume()
-
-        binding.profileProgressBar.visibility = View.VISIBLE
-
         viewModel.loadCourses()
-
-        viewLifecycleOwner.lifecycleScope.launch {
-            delay(500)
-            binding.profileProgressBar.visibility = View.GONE
-        }
     }
 
-    private fun observeCourses() {
+    private fun observeState() {
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.courses.collect { courses ->
-                binding.profileProgressBar.visibility = View.GONE
-                adapter.submitList(courses)
+            viewModel.uiState.collect { state ->
+                binding.profileProgressBar.visibility =
+                    if (state.isLoading) View.VISIBLE else View.GONE
+
+                adapter.submitList(state.courses)
+
+                state.error?.let { error: UiText ->
+                    Snackbar
+                        .make(
+                            binding.root,
+                            error.asString(requireContext()),
+                            Snackbar.LENGTH_SHORT
+                        )
+                        .show()
+
+                    viewModel.clearError()
+                }
             }
         }
     }

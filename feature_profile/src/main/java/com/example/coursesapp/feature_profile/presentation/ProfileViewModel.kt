@@ -2,6 +2,7 @@ package com.example.coursesapp.feature_profile.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.coursesapp.core.ui.UiText
 import com.example.coursesapp.domain.model.Course
 import com.example.coursesapp.domain.usecase.GetCoursesUseCase
 import com.example.coursesapp.domain.usecase.ToggleFavoriteUseCase
@@ -17,8 +18,8 @@ class ProfileViewModel(
     private val toggleFavoriteUseCase: ToggleFavoriteUseCase,
 ) : ViewModel() {
 
-    private val _courses = MutableStateFlow<List<ProfileCourseUi>>(emptyList())
-    val courses: StateFlow<List<ProfileCourseUi>> = _courses.asStateFlow()
+    private val _uiState = MutableStateFlow(ProfileUiState(isLoading = true))
+    val uiState: StateFlow<ProfileUiState> = _uiState.asStateFlow()
 
     init {
         loadCourses()
@@ -26,15 +27,53 @@ class ProfileViewModel(
 
     fun loadCourses() {
         viewModelScope.launch {
-            val courses = getCoursesUseCase()
-            _courses.value = courses.map { it.toProfileCourseUi() }
+            _uiState.value = _uiState.value.copy(
+                isLoading = true,
+                error = null,
+            )
+
+            runCatching {
+                getCoursesUseCase()
+            }.onSuccess { courses ->
+                _uiState.value = ProfileUiState(
+                    isLoading = false,
+                    courses = courses.map { it.toProfileCourseUi() },
+                    error = null,
+                )
+            }.onFailure { error ->
+                _uiState.value = ProfileUiState(
+                    isLoading = false,
+                    courses = emptyList(),
+                    error = error.toUiText(R.string.error_load_courses),
+                )
+            }
         }
     }
 
     fun toggleFavorite(item: ProfileCourseUi) {
         viewModelScope.launch {
-            toggleFavoriteUseCase(item.course.id)
-            loadCourses()
+            runCatching {
+                toggleFavoriteUseCase(item.course.id)
+            }.onSuccess {
+                loadCourses()
+            }.onFailure { error ->
+                _uiState.value = _uiState.value.copy(
+                    error = error.toUiText(R.string.error_toggle_favorite),
+                )
+            }
+        }
+    }
+
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
+    }
+
+    private fun Throwable.toUiText(fallbackResId: Int): UiText {
+        val msg = message?.trim()
+        return if (msg.isNullOrEmpty()) {
+            UiText.StringResource(fallbackResId)
+        } else {
+            UiText.DynamicString(msg)
         }
     }
 
@@ -43,31 +82,31 @@ class ProfileViewModel(
             101 -> ProfileCourseUi(
                 course = this,
                 progressPercent = 50,
-                lessonsText = "22/44 уроков",
+                lessonsTextRes = R.string.lessons_22_44,
                 coverRes = R.drawable.ic_cover2,
             )
             100 -> ProfileCourseUi(
                 course = this,
                 progressPercent = 30,
-                lessonsText = "15/48 уроков",
+                lessonsTextRes = R.string.lessons_15_48,
                 coverRes = R.drawable.ic_cover,
             )
             102 -> ProfileCourseUi(
                 course = this,
                 progressPercent = 70,
-                lessonsText = "28/40 уроков",
+                lessonsTextRes = R.string.lessons_28_40,
                 coverRes = R.drawable.ic_cover3,
             )
             103 -> ProfileCourseUi(
                 course = this,
                 progressPercent = 10,
-                lessonsText = "4/40 уроков",
+                lessonsTextRes = R.string.lessons_4_40,
                 coverRes = R.drawable.ic_cover4,
             )
             else -> ProfileCourseUi(
                 course = this,
                 progressPercent = 20,
-                lessonsText = "8/40 уроков",
+                lessonsTextRes = R.string.lessons_8_40,
                 coverRes = R.drawable.ic_cover5,
             )
         }

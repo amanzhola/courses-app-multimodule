@@ -2,9 +2,11 @@ package com.example.coursesapp.feature_main.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.coursesapp.core.ui.UiText
 import com.example.coursesapp.domain.model.Course
 import com.example.coursesapp.domain.usecase.GetCoursesUseCase
 import com.example.coursesapp.domain.usecase.ToggleFavoriteUseCase
+import com.example.coursesapp.feature_main.R
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -29,7 +31,7 @@ class MainViewModel(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(
                 isLoading = true,
-                errorMessage = null,
+                error = null,
             )
 
             runCatching {
@@ -40,13 +42,13 @@ class MainViewModel(
                 _uiState.value = MainUiState(
                     isLoading = false,
                     courses = currentCourses,
-                    errorMessage = null,
+                    error = null,
                 )
-            }.onFailure { error ->
+            }.onFailure { throwable ->
                 _uiState.value = MainUiState(
                     isLoading = false,
                     courses = emptyList(),
-                    errorMessage = error.message ?: ERROR_LOAD_COURSES,
+                    error = throwable.toUiText(R.string.error_load_courses),
                 )
             }
         }
@@ -72,13 +74,20 @@ class MainViewModel(
                 }
 
                 currentCourses = applyCurrentSort(updatedCourses)
-                _uiState.value = _uiState.value.copy(courses = currentCourses)
-            }.onFailure { error ->
                 _uiState.value = _uiState.value.copy(
-                    errorMessage = error.message ?: ERROR_TOGGLE_FAVORITE,
+                    courses = currentCourses,
+                    error = null,
+                )
+            }.onFailure { throwable ->
+                _uiState.value = _uiState.value.copy(
+                    error = throwable.toUiText(R.string.error_toggle_favorite),
                 )
             }
         }
+    }
+
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 
     private fun applyCurrentSort(courses: List<Course>): List<Course> {
@@ -89,8 +98,12 @@ class MainViewModel(
         }
     }
 
-    private companion object {
-        const val ERROR_LOAD_COURSES = "Ошибка загрузки курсов"
-        const val ERROR_TOGGLE_FAVORITE = "Ошибка обновления избранного"
+    private fun Throwable.toUiText(fallbackResId: Int): UiText {
+        val msg = message?.trim()
+        return if (msg.isNullOrEmpty()) {
+            UiText.StringResource(fallbackResId)
+        } else {
+            UiText.DynamicString(msg)
+        }
     }
 }

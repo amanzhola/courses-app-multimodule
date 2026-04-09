@@ -5,16 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.coursesapp.domain.model.Course
 import com.example.coursesapp.feature_profile.R
 import com.example.coursesapp.feature_profile.databinding.ItemProfileCourseBinding
-
-data class ProfileCourseUi(
-    val course: Course,
-    val progressPercent: Int,
-    val lessonsText: String,
-    val coverRes: Int,
-)
 
 class ProfileCoursesAdapter(
     private val onFavoriteClick: (ProfileCourseUi) -> Unit,
@@ -42,7 +34,7 @@ class ProfileCoursesAdapter(
             rateTextView.text = item.course.rate.toString()
             dateTextView.text = item.course.startDate
             progressPercentTextView.text = "${item.progressPercent}%"
-            progressLessonsTextView.text = item.lessonsText
+            progressLessonsTextView.setText(item.lessonsTextRes)
             progressBar.progress = item.progressPercent
             courseImageView.setImageResource(item.coverRes)
 
@@ -62,11 +54,17 @@ class ProfileCoursesAdapter(
 
     companion object {
         private val DiffCallback = object : DiffUtil.ItemCallback<ProfileCourseUi>() {
-            override fun areItemsTheSame(oldItem: ProfileCourseUi, newItem: ProfileCourseUi): Boolean {
+            override fun areItemsTheSame(
+                oldItem: ProfileCourseUi,
+                newItem: ProfileCourseUi,
+            ): Boolean {
                 return oldItem.course.id == newItem.course.id
             }
 
-            override fun areContentsTheSame(oldItem: ProfileCourseUi, newItem: ProfileCourseUi): Boolean {
+            override fun areContentsTheSame(
+                oldItem: ProfileCourseUi,
+                newItem: ProfileCourseUi,
+            ): Boolean {
                 return oldItem == newItem
             }
         }

@@ -11,4 +11,14 @@
     <string name="profile_rating_star_content_description">Рейтинг курса</string>
     <string name="profile_bookmark_circle_content_description">Избранное</string>
     <string name="profile_bookmark_icon_content_description">Курс в избранном</string>
+
+    <string name="error_load_courses">Ошибка загрузки курсов</string>
+    <string name="error_toggle_favorite">Ошибка обновления избранного</string>
+
+    <string name="lessons_22_44">22/44 уроков</string>
+    <string name="lessons_15_48">15/48 уроков</string>
+    <string name="lessons_28_40">28/40 уроков</string>
+    <string name="lessons_4_40">4/40 уроков</string>
+    <string name="lessons_8_40">8/40 уроков</string>
+
 </resources>

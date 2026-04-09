@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.example.coursesapp.core.ui.asString
 import com.example.coursesapp.feature_course.R
 import com.example.coursesapp.feature_course.databinding.FragmentCourseBinding
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -48,6 +50,18 @@ class CourseFragment : Fragment(R.layout.fragment_course) {
             viewModel.uiState.collect { state ->
                 binding.courseCoverProgressBar.visibility =
                     if (state.isLoading) View.VISIBLE else View.GONE
+
+                state.error?.let { error ->
+                    Snackbar
+                        .make(
+                            binding.root,
+                            error.asString(requireContext()),
+                            Snackbar.LENGTH_SHORT
+                        )
+                        .show()
+
+                    viewModel.clearError()
+                }
 
                 val course = state.course ?: return@collect
 

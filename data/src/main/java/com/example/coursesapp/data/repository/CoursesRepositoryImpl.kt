@@ -1,5 +1,6 @@
 package com.example.coursesapp.data.repository
 
+import com.example.coursesapp.data.BuildConfig
 import com.example.coursesapp.data.local.dao.FavoriteCoursesDao
 import com.example.coursesapp.data.local.entity.FavoriteCourseEntity
 import com.example.coursesapp.data.local.source.CoursesLocalMockDataSource
@@ -17,13 +18,17 @@ class CoursesRepositoryImpl(
     override suspend fun getCourses(): List<Course> {
         val localOverrides = favoriteDao.getAll().associateBy { it.courseId }
 
-        val remoteCourses = runCatching {
+        val courseDtos = try {
             api.getCourses().courses
-        }.getOrElse {
-            mockDataSource.getCourses().courses
+        } catch (e: Exception) {
+            if (BuildConfig.USE_LOCAL_FALLBACK) {
+                mockDataSource.getCourses().courses
+            } else {
+                throw e
+            }
         }
 
-        return remoteCourses.map { dto ->
+        return courseDtos.map { dto ->
             val course = dto.toDomain()
             val localState = localOverrides[course.id]
 

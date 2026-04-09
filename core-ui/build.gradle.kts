@@ -4,11 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.coursesapp.feature_profile"
+    namespace = "com.example.coursesapp.core.ui"
     compileSdk = 36
 
     defaultConfig {
         minSdk = 28
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -22,35 +23,20 @@ android {
             )
         }
     }
-
-    buildFeatures {
-        viewBinding = true
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
     kotlinOptions {
         jvmTarget = "11"
     }
 }
 
 dependencies {
-    implementation(project(":domain"))
-    implementation(project(":feature_main"))
-    implementation(project(":core-ui"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.fragment.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.koin.android)
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

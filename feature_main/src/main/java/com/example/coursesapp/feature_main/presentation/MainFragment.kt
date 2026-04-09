@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.coursesapp.core.ui.asString
 import com.example.coursesapp.feature_main.R
 import com.example.coursesapp.feature_main.databinding.FragmentMainBinding
 import com.example.coursesapp.feature_main.presentation.adapter.CoursesAdapter
+import com.google.android.material.snackbar.Snackbar
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -83,6 +85,19 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                         if (state.isLoading) View.VISIBLE else View.GONE
 
                     adapter.submitList(state.courses)
+
+                    val error = state.error
+                    if (error != null) {
+                        Snackbar
+                            .make(
+                                binding.root,
+                                error.asString(requireContext()),
+                                Snackbar.LENGTH_SHORT
+                            )
+                            .show()
+
+                        viewModel.clearError()
+                    }
                 }
             )
         )

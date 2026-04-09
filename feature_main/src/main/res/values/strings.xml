@@ -14,4 +14,8 @@
     <string name="main_bookmark_content_description">Избранное</string>
     <string name="main_rating_star_content_description">Рейтинг курса</string>
     <string name="main_details_arrow_content_description">Перейти к подробностям</string>
+
+    <string name="error_load_courses">Ошибка загрузки курсов</string>
+    <string name="error_toggle_favorite">Ошибка обновления избранного</string>
+
 </resources>

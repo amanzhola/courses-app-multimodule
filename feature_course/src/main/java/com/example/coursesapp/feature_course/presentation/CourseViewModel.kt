@@ -2,8 +2,10 @@ package com.example.coursesapp.feature_course.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.coursesapp.core.ui.UiText
 import com.example.coursesapp.domain.usecase.GetCoursesUseCase
 import com.example.coursesapp.domain.usecase.ToggleFavoriteUseCase
+import com.example.coursesapp.feature_course.R
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -25,7 +27,7 @@ class CourseViewModel(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(
                 isLoading = true,
-                errorMessage = null,
+                error = null,
             )
 
             runCatching {
@@ -36,13 +38,17 @@ class CourseViewModel(
                 _uiState.value = CourseUiState(
                     isLoading = false,
                     course = course,
-                    errorMessage = if (course == null) ERROR_COURSE_NOT_FOUND else null,
+                    error = if (course == null) {
+                        UiText.StringResource(R.string.error_course_not_found)
+                    } else {
+                        null
+                    },
                 )
-            }.onFailure { error ->
+            }.onFailure { throwable ->
                 _uiState.value = CourseUiState(
                     isLoading = false,
                     course = null,
-                    errorMessage = error.message ?: ERROR_COURSE_LOAD,
+                    error = throwable.toUiText(R.string.error_course_load),
                 )
             }
         }
@@ -56,9 +62,9 @@ class CourseViewModel(
                 toggleFavoriteUseCase(course.id)
             }.onSuccess {
                 loadCourse(course.id)
-            }.onFailure { error ->
+            }.onFailure { throwable ->
                 _uiState.value = _uiState.value.copy(
-                    errorMessage = error.message ?: ERROR_TOGGLE_FAVORITE,
+                    error = throwable.toUiText(R.string.error_toggle_favorite),
                 )
             }
         }
@@ -70,11 +76,20 @@ class CourseViewModel(
         }
     }
 
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
+    }
+
+    private fun Throwable.toUiText(fallbackResId: Int): UiText {
+        val msg = message?.trim()
+        return if (msg.isNullOrEmpty()) {
+            UiText.StringResource(fallbackResId)
+        } else {
+            UiText.DynamicString(msg)
+        }
+    }
+
     private companion object {
         const val NO_COURSE_ID = -1
-
-        const val ERROR_COURSE_NOT_FOUND = "Курс не найден"
-        const val ERROR_COURSE_LOAD = "Ошибка загрузки курса"
-        const val ERROR_TOGGLE_FAVORITE = "Ошибка обновления избранного"
     }
 }
